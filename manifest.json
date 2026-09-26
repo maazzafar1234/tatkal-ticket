@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "IRCTC Tatkal Auto-Pilot",
+  "version": "1.0.0",
+  "description": "High-speed automated autofill and booking assistant for IRCTC Tatkal.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.irctc.co.in/*"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "public/vite.svg",
+      "48": "public/vite.svg"
+    }
+  },
+  "background": {
+    "service_worker": "src/background/background.ts",
+    "type": "module"
+  }
+}
